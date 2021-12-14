@@ -3,7 +3,7 @@
     <ol>
         <li *ngFor="let item of equipmentItems">
             <!-- "Add to Cargo Hold" button goes here. -->
-            <button (click) = "addItem(item)" 
+            <button (click) = "nearCapacity = addItem(item)" 
             [disabled]="cargoHold.length >= maxItems || (item.mass + cargoMass) > maximumAllowedMass" 
             style="background-Color: rgb(255, 155, 255)">Add to Cargo Hold</button>
             {{item.name}}, {{item.mass}} kg
